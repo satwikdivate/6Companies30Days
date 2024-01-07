@@ -89,5 +89,27 @@ public:
             winner=(winner+k)%i;
         }
         return winner+1;
+
+       
+        // Intresting queue based approch 
+        queue<int>q;
+        for(int i=1;i<=n;i++)
+            q.push(i);
+        
+        while(q.size()!=1){
+
+            // push k-1 element to maintain cicular nature
+            for(int i=0;i<k-1;i++){
+
+                int front=q.front();
+                q.pop();
+                q.push(front);
+            }
+
+    // pop the element
+        q.pop();
+        }
+
+        return q.front();
     }
 };
