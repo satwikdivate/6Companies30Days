@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
  int numberOfSubarrays(vector<int>& arr, int k) {
      
      for(int i=0;i<arr.size();i++){
